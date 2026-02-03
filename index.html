@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Neha Edition | Ultra Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #c084fc;
+            --surface: #0a0a0a;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--surface);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .serif-font {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        /* Abstract Premium Background */
+        .bg-pattern {
+            position: fixed;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(255,255,255,0.02) 1px, transparent 0);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        .luxury-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-panel:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: scale(1.02);
+        }
+
+        /* Animated Grainy Texture */
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            opacity: 0.03;
+            z-index: 9999;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3group%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            animation: scanline 8s linear infinite;
+        }
+
+        .nav-link {
+            letter-spacing: 0.2em;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: rgba(255,255,255,0.4);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="noise"></div>
+    <div class="bg-pattern"></div>
+    <div class="scanline"></div>
+
+    <!-- Minimalist Navbar -->
+    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-end border-b border-white/5 bg-black/50 backdrop-blur-lg">
+        <div>
+            <span class="text-xs font-bold tracking-[0.5em] text-white/30 block mb-1">PROPRIETARY VIBE</span>
+            <span class="text-lg font-black italic tracking-tighter">NEHA<span class="text-indigo-500">_</span>EDITION</span>
+        </div>
+        <div class="hidden md:flex gap-12 pb-1">
+            <a href="#hero" class="nav-link">Entry</a>
+            <a href="#rules" class="nav-link">Protocol</a>
+            <a href="#archive" class="nav-link">Archive</a>
+        </div>
+    </nav>
+
+    <main class="relative pt-40 pb-20 px-6">
+        <!-- Hero Section -->
+        <section id="hero" class="max-w-5xl mx-auto mb-40">
+            <div class="flex flex-col items-center text-center">
+                <div class="mb-8 overflow-hidden h-6">
+                    <p class="text-[10px] tracking-[0.8em] text-indigo-400 uppercase animate-bounce">System Initializing...</p>
+                </div>
+                <h1 class="serif-font text-8xl md:text-[10rem] italic leading-none mb-8">
+                    Hello, <span class="luxury-gradient">Neha.</span>
+                </h1>
+                <p class="max-w-lg text-slate-500 font-light leading-relaxed tracking-wide text-sm md:text-base">
+                    Kyunki har achhi dosti ek celebration deserve karti hai. A bespoke digital architectural space for our connection.
+                </p>
+            </div>
+        </section>
+
+        <!-- Staggered Content Grid -->
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10">
+            
+            <!-- Vibe Card - Large -->
+            <div class="md:col-span-7 glass-panel p-16 rounded-sm relative group overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 text-white/5 font-black text-6xl">01</div>
+                <h3 class="text-xs tracking-[0.4em] font-bold text-indigo-400 mb-8 uppercase">Vibe Status</h3>
+                <h2 class="text-4xl font-bold mb-8">Dosti Ka Swag</h2>
+                <p class="serif-font text-3xl text-white/70 italic leading-snug">
+                    "Dosti mein no sorry, no thank you... lekin ek achha sa surprise toh banta hai na? Neha, tum meri nayi bestie bani ho, aur mujhe laga ki kyun na kuch alag kiya jaye."
+                </p>
+            </div>
+
+            <!-- Quote Card - Minimal -->
+            <div class="md:col-span-5 glass-panel p-12 rounded-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xs tracking-[0.4em] font-bold text-pink-400 mb-12 uppercase">Philosophy</h3>
+                    <div id="quote-box" class="text-xl font-light leading-relaxed text-slate-300">
+                        "Ek achha dost zindagi bhar saath deta hai, par ek bestie zindagi hi badal deti hai."
+                    </div>
+                </div>
+                <button onclick="newQuote()" class="mt-12 group flex items-center gap-4 text-[10px] font-black tracking-[0.3em] uppercase">
+                    <span class="w-10 h-[1px] bg-white/20 group-hover:w-16 transition-all duration-500"></span>
+                    Rotate Thought
+                </button>
+            </div>
+
+            <!-- Full Width Protocol Section -->
+            <div id="rules" class="md:col-span-12 mt-10">
+                <div class="p-1 border-y border-white/5 mb-20 flex justify-between items-center px-4">
+                    <span class="text-[9px] font-bold tracking-widest text-white/20">DOCUMENT NO. 842-DOSTI</span>
+                    <span class="text-[9px] font-bold tracking-widest text-white/20">CLASSIFIED BESTIE INTEL</span>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-white/5">
+                    <div class="bg-[#0a0a0a] p-16 hover:bg-white/[0.02] transition-colors">
+                        <span class="serif-font text-4xl italic mb-6 block">01</span>
+                        <h4 class="font-bold tracking-widest uppercase text-xs mb-4">No Ghosting</h4>
+                        <p class="text-slate-500 text-sm font-light leading-relaxed">Chaahe kitni bhi busy ho Neha, ek 'hi' toh banta hai. Bina bataye gayab hona mana hai!</p>
+                    </div>
+                    <div class="bg-[#0a0a0a] p-16 hover:bg-white/[0.02] transition-colors">
+                        <span class="serif-font text-4xl italic mb-6 block">02</span>
+                        <h4 class="font-bold tracking-widest uppercase text-xs mb-4">Treat System</h4>
+                        <p class="text-slate-500 text-sm font-light leading-relaxed">Jab bhi koi bada kaam ho, treat compulsory hai. Party ka moka nahi chodna.</p>
+                    </div>
+                    <div class="bg-[#0a0a0a] p-16 hover:bg-white/[0.02] transition-colors">
+                        <span class="serif-font text-4xl italic mb-6 block">03</span>
+                        <h4 class="font-bold tracking-widest uppercase text-xs mb-4">Hamesha Saath</h4>
+                        <p class="text-slate-500 text-sm font-light leading-relaxed">Galtiyon pe daantna aur mushkil mein saath dena. Yeh dosti hamesha premium rahegi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Reveal -->
+            <div id="archive" class="md:col-span-12 glass-panel p-20 text-center rounded-sm mt-10">
+                <h2 class="serif-font text-6xl italic mb-8">Abhi Toh Shuruaat Hai, Neha!</h2>
+                <p class="text-slate-500 max-w-xl mx-auto mb-12 text-sm font-light tracking-wide uppercase">
+                    Yeh toh sirf ek chhota sa tohfa hai hamari nayi dosti ke liye. Aage bahut saari memories banani baaki hain.
+                </p>
+                <button id="surprise-btn" class="relative px-12 py-5 border border-white/10 overflow-hidden group">
+                    <span class="relative z-10 text-[10px] font-black tracking-[0.5em] uppercase group-hover:text-black transition-colors duration-500">Unlock Message</span>
+                    <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ultra Premium Footer -->
+    <footer class="mt-40 border-t border-white/5 bg-black py-20 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-20">
+            <div class="max-w-sm">
+                <h3 class="text-2xl font-black italic mb-6">NEHA<span class="text-indigo-500">.</span>EDITION</h3>
+                <p class="text-slate-600 text-xs font-light leading-relaxed tracking-widest uppercase">
+                    Digital asset established for authentic connection. Unauthorized drama prohibited.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-20">
+                <div class="space-y-6">
+                    <h4 class="text-[10px] font-black tracking-widest text-indigo-400 uppercase">Indexing</h4>
+                    <ul class="text-[10px] space-y-3 font-bold text-slate-500 uppercase tracking-widest">
+                        <li><a href="#" class="hover:text-white transition-colors">Metadata</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Encryption</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Logs</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="text-[10px] font-black tracking-widest text-pink-400 uppercase">Verification</h4>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-widest space-y-2">
+                        <p>Status: <span class="text-white">Confirmed Bestie</span></p>
+                        <p>Vibe: <span class="text-white">Elite</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-40 pt-10 border-t border-white/5 flex justify-between items-center text-[8px] font-bold tracking-[0.5em] text-white/20 uppercase">
+            <span>&copy; 2026 VIBE ARCHIVE</span>
+            <span>Handcrafted for Neha</span>
+        </div>
+    </footer>
+
+    <!-- Overlay -->
+    <div id="message-overlay" class="fixed inset-0 bg-black/98 z-[100] flex items-center justify-center p-6 hidden opacity-0 transition-all duration-700">
+        <div class="max-w-2xl w-full text-center p-20 glass-panel border-white/10" id="modal-content">
+            <h3 class="serif-font text-5xl italic mb-10 luxury-gradient">Final Message for Neha</h3>
+            <p class="text-slate-400 text-xl font-light italic mb-12 leading-relaxed">
+                "Bas itna hi kehna tha Neha ki dosti hamesha genuine honi chahiye. Tum jaisi ho, waisi hi rehna. Let's make this friendship legendary!"
+            </p>
+            <button onclick="closeOverlay()" class="text-[9px] font-black tracking-[0.6em] uppercase border-b border-white/20 pb-2 hover:text-indigo-400 hover:border-indigo-400 transition-all">Dismiss Archive</button>
+        </div>
+    </div>
+
+    <script>
+        const quotes = [
+            "Dost woh hai jo aapke past ko samajhta hai, future mein believe karta hai aur aaj aap jaise ho waise hi accept karta hai.",
+            "Besties woh hote hain jo ek doosre ki bakwaas bina judge kiye sunte hain.",
+            "Rishte khoon ke nahi, dil ke hote hain. Neha, dosti sabse bada dil ka rishta hai.",
+            "Zindagi mein sab badal jata hai, lekin ek sacha dost hamesha wahi rehta hai.",
+            "Dosti ek aisi chocolate hai jo jitni purani ho, utni meethi lagti hai!"
+        ];
+
+        function newQuote() {
+            const qBox = document.getElementById('quote-box');
+            qBox.style.opacity = 0;
+            setTimeout(() => {
+                qBox.innerText = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
+                qBox.style.opacity = 1;
+            }, 500);
+        }
+
+        const btn = document.getElementById('surprise-btn');
+        const overlay = document.getElementById('message-overlay');
+        const modalContent = document.getElementById('modal-content');
+
+        btn.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            setTimeout(() => {
+                overlay.classList.add('opacity-100');
+            }, 50);
+        });
+
+        function closeOverlay() {
+            overlay.classList.remove('opacity-100');
+            setTimeout(() => overlay.classList.add('hidden'), 700);
+        }
+    </script>
+</body>
+</html>
